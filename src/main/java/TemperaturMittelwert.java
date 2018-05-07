@@ -36,5 +36,29 @@ public class TemperaturMittelwert {
         System.out.println(kl10+gr10kl20+grgl20 + " = alle Werte");
 
 
+        System.out.println(Vorkommen(temp, 0, 10) + " Werte unter 10°");
+        System.out.println(Vorkommen(temp, 10, 20) + " Werte über 10° und unter 20°");
+        System.out.println(Vorkommen(temp, 19, 40) + " Werte 20° und darüber");
+
+        System.out.println(((Vorkommen(temp, 0, 10) + (Vorkommen(temp, 10, 20) + (Vorkommen(temp, 19, 40)) + " = alle Werte"))));
+
+
+
     }
+
+    public static int Vorkommen (int[] Array, int Von, int Bis) {
+
+        int vorkommen = 0;
+
+        for (int i = 0; i < Array.length; i++) {
+
+            if(Array[i] > Von && Array[i] < Bis) {
+                vorkommen++;
+            }
+
+        }
+
+        return vorkommen;
+    }
+
 }
