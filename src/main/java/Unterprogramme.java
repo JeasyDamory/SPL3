@@ -4,7 +4,11 @@ public class Unterprogramme {
 
         String text1 = "Heute ist ein schöner Tag.";
 
+
         System.out.println(ZeichenZählen(text1, 'e'));
+        System.out.println(ZeichenZählen(text1, 'ä'));
+
+        System.out.println(ZeichenVorkommen(text1, 'e'));
 
     }
 
@@ -15,6 +19,7 @@ public class Unterprogramme {
         int vorkommen = 0;
 
         String ausgabe = "";
+
 
         for(int i = 0; i < text.length; i++) {
 
@@ -27,6 +32,24 @@ public class Unterprogramme {
         ausgabe = "Anzahl der " + GesBuchstabe + "'s im Text: " + vorkommen;
 
         return ausgabe;
+    }
+
+    public static int ZeichenVorkommen (String Text, char GesBuchstabe) {
+
+        char[] text = Text.toCharArray();
+
+        int vorkommen = 0;
+
+
+        for(int i = 0; i < text.length; i++) {
+
+            if(text[i] == GesBuchstabe){
+                vorkommen++;
+            }
+
+        }
+
+        return vorkommen;
     }
 
 }
